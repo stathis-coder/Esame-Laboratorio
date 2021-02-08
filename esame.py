@@ -34,7 +34,11 @@ class CSVTimeSeriesFile():
                 #se non è possibile farlo
                 except:
                     #salto la riga
-                    continue
+                    continue 
+
+                #controllo che le epoch siano positive
+                if elements[0] < 0:
+                    raise ExamException('Error: Epochs must be positive got',elements[0],'in position', i+1)
             
 
                 #controllo che l'input di temperature sia convertibile in float
@@ -119,3 +123,10 @@ def daily_stats(data_list):
     
     #ritorno la lista risultato
     return result_list
+
+    #test
+time_series_file = CSVTimeSeriesFile(name='data.csv')
+time_series = time_series_file.get_data()
+lista=daily_stats(time_series)
+print(lista)
+print(len(lista))

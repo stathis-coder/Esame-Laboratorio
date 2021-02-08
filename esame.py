@@ -86,7 +86,7 @@ def daily_stats(data_list):
 
         #se sono all'ultimo elemento della lista
         if i==len(data_list)-1:
-            #ne aggiungo un' elemento in piu per interrompere corettamente il ciclo nella riga 95
+            #ne aggiungo un' elemento in piu per interrompere corettamente il ciclo nella riga 100
             day_start_list.append([data_list[0][0],data_list[0][1]])
 
         #utilizzando l'operazione di modulo riesco a calcolare l'inizio di ogni giorno in epoch e lo salvo insieme alla temperatura corrispondente
@@ -123,4 +123,5 @@ def daily_stats(data_list):
     
     #ritorno la lista risultato
     return result_list
+    
 

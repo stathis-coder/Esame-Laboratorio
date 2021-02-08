@@ -123,5 +123,6 @@ def daily_stats(data_list):
     
     #ritorno la lista risultato
     return result_list
-    
+
+
 

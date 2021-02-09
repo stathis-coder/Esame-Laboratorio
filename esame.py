@@ -36,9 +36,10 @@ class CSVTimeSeriesFile():
                     #salto la riga
                     continue 
 
-                #controllo che le epoch siano positive
+                #se una epoch non è positiva
                 if elements[0] < 0:
-                    raise ExamException('Error: Epochs must be positive got',elements[0],'in position', i+1)
+                    #la salto
+                    continue
             
 
                 #controllo che l'input di temperature sia convertibile in float
